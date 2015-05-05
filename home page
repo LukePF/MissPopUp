@@ -1,0 +1,12 @@
+            <div id="main_logo"></div>
+            <form id="search_form">
+                <div id="search_bar">
+                    <input type="search" placeholder="Search with location, like Chengdu" class="input_bar" ng-model="target_city">
+                </div>
+
+                <div id="search_button">
+                    <a href="#/result/{{target_city}}">
+                        <input id="submit_btn" type="submit" value="">
+                    </a>
+                </div>
+            </form>
