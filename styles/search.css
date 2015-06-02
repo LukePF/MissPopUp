@@ -1,0 +1,97 @@
+@charset "utf-8";
+@import url("../fonts/HelveticaNeueDeskUI/stylesheet.css");
+body {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../images/food_cafe_snack_coca.jpg);
+	background-size: cover;
+}
+#logo {
+	position: absolute;
+	height: 140px;
+	width: 140px;
+	margin-top: 0%;
+	margin-right: 0%;
+	margin-left: calc(50% - 70px);
+	margin-bottom: 0%;
+	
+	cursor: pointer;
+	
+	background-image: url(../images/logo_mpu.png);
+	background-color: rgba(255,126,46,1.00);
+	background-size: cover;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+#index_wrapper {
+	height: calc(100% - 180px);
+}
+#index_wrapper #title_words {
+	width: 80%;
+	height: 30%;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+	padding-top: 7%;
+}
+#index_wrapper #title_words h1 {
+	color: rgba(255,255,255,1.00);
+	text-align: center;
+	width: 100%;
+	height: 58px;
+	margin: 0 auto;
+	font-size: 4.4em;
+}
+#index_wrapper #title_words h2 {
+	color: rgba(255,255,255,1.00);
+	text-align: center;
+	width: 100%;
+	height: 22px;
+	font-size: 1.8em;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: normal;
+}
+#index_wrapper #search_form {
+	width: 70%;
+	height: 20%;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+}
+#search_form #search_bar input {
+	width: calc( 80% - 150px);
+	height: 34px;
+	padding-left: 20px;
+	padding-right: 10px;
+	margin-left: 10%;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: hidden;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #4D4D4D;
+	font-size: 1.6rem;
+	line-height: 1.2rem;
+}
+
+#search_form #search_button input {
+	width: 120px;
+	height: 36px;
+	outline: none;
+	list-style-type: none;
+	border: hidden;
+	float: left;
+	color: #FFFFFF;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: rgba(255,126,46,1.00);
+	font-size: 1.4rem;
+	cursor: pointer;
+}
