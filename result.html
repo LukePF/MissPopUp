@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Search_Result</title>
+<link href="styles/style.css" rel="stylesheet" type="text/css">
+<link href="styles/result.css" rel="stylesheet" type="text/css">
+<link href="styles/datetable.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery.js"></script>
+<script src="jQueryAssets/jquery-ui.js"></script>
+</head>
+
+<body>
+  <header><!-- This is the header content. It contains Logo and links -->
+    <div id="logo"></div>
+  <div id="headerLinks">
+    <ul>
+        <a href="Search.html" title="Search"><img src="images/ic_search.png" width="24" height="24" alt=""/></a>
+        <li ><a href="NewPopup.html" title="POPUP">POPUP</a></li>
+        <li><a href="Login.html" title="LOGIN">LOGIN</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  <div id="afterheader">
+    <form id="result_search_form" method= "GET" class="form" action="Result.php">
+     <div id="search_bar"><input type="search" name="searchbar" placeholder="Tampere"></div>
+     <div id="date_from"><input name="date_from" type="readonly"></div>
+		<script>
+        $( "#dateorder" ).datepicker({
+            inline: true
+        });
+          // Hover states on the static widgets
+        $( "#dialog-link, #icons li" ).hover(
+            function() {
+                $( this ).addClass( "ui-state-hover" );
+            },
+            function() {
+                $( this ).removeClass( "ui-state-hover" );
+            }
+        );
+        </script>
+     <div id="date_to"><input name="date_to"></div>
+     <div id="price_bar"><input name="price_bar"></div>
+     <div id="search_button"><input type="submit" value="NARROW IT"></div>
+    </form>
+  </div>
+  
+  
+  <div id="result_wrapper" class="wrapper">
+    <div id="result_title">
+      <p style="width:100%">Search results for</p>
+      <h1 style="width:160px; line-height: 0pt">TAMPERE</h1>
+      <p style="width:480px">FILTERS APPLIED:   PRICE: 30€ - 50€   DATE: 20/05/2015 - 30/05/2015</p>
+      <div>
+        <span id="sleBG">
+        <span id="sleHid">
+        <select id="list_result_order" class="select">
+          <option selected="selected">ORDER BY</option>
+          <option value="by_price">PRICE</option>
+          <option value="by_distance">DISTANCE</option>
+          <option value="by_stars">STARS</option>
+        </select>
+        </span>
+        </span>
+      </div>
+      
+      <div style="clear:both"></div>
+    </div>
+    
+    <div id="result_list">
+      <div id="list_border">
+        <div class="result_event">
+          <div class="result_event_pic">
+          <img src="images/foodexample.png" width="300" height="300" alt=""/> </div>
+          <div class="result_event_info">
+            <div class="event_name">EVENT NAME</div>
+            <div class="event_price"><label>30,-€</label></div>
+            <div class="event_host"><p>hosted by - <label style="font-weight:600">HOST NAME</label></p></div>
+            <div class="event_date_style"><p><label style="font-weight:600">Date:</label>20/05/2015<br><label style="font-weight:600">Style:</label>Itlian</p></div>
+            <div class="event_button"><input type="button" value="Join Now"></div>
+          </div>
+        </div>
+        
+        <div class="result_event">
+          <div class="result_event_pic">
+            
+          </div>
+          <div class="result_event_info">
+            <div class="event_name"></div>
+            <div class="event_price"></div>
+            <div class="event_host"></div>
+            <div class="event_date"></div>
+            <div class="event_style"></div>
+            <div class="event_button"></div>
+          </div>
+        </div>
+        
+        <div class="result_event">
+          <div class="result_event_pic">
+            
+          </div>
+          <div class="result_event_info">
+            <div class="event_name"></div>
+            <div class="event_price"></div>
+            <div class="event_host"></div>
+            <div class="event_date"></div>
+            <div class="event_style"></div>
+            <div class="event_button"></div>
+          </div>
+        </div>
+        
+        <div class="result_event">
+          <div class="result_event_pic">
+            
+          </div>
+          <div class="result_event_info">
+            <div class="event_name"></div>
+            <div class="event_price"></div>
+            <div class="event_host"></div>
+            <div class="event_date"></div>
+            <div class="event_style"></div>
+            <div class="event_button"></div>
+          </div>
+        </div>
+        
+        <div class="result_event">
+          <div class="result_event_pic">
+            
+          </div>
+          <div class="result_event_info">
+            <div class="event_name"></div>
+            <div class="event_price"></div>
+            <div class="event_host"></div>
+            <div class="event_date"></div>
+            <div class="event_style"></div>
+            <div class="event_button"></div>
+          </div>
+        </div>
+        
+        <div class="result_event">
+          <div class="result_event_pic">
+            
+          </div>
+          <div class="result_event_info">
+            <div class="event_name"></div>
+            <div class="event_price"></div>
+            <div class="event_host"></div>
+            <div class="event_date"></div>
+            <div class="event_style"></div>
+            <div class="event_button"></div>
+          </div>
+        </div>
+        
+        <div class="result_event">
+          <div class="result_event_pic">
+            
+          </div>
+          <div class="result_event_info">
+            <div class="event_name"></div>
+            <div class="event_price"></div>
+            <div class="event_host"></div>
+            <div class="event_date"></div>
+            <div class="event_style"></div>
+            <div class="event_button"></div>
+          </div>
+        </div>
+        
+        <div style="clear:both"></div>
+      
+      </div>
+  
+    </div>
+  </div>
+  
+  
+  <footer>© MISSPOPUP 2015<a href="Info.html" title="ABOUT MISSPOPUP">ABOUT US</a></footer>
+</body>
+</html>
