@@ -1,0 +1,286 @@
+@charset "utf-8";
+header {
+	height: 90px;
+	margin: 0 auto;
+	width: 100%;
+
+	background-color: rgba(255,126,46,1.00);
+}
+#logo {
+	position: absolute;
+	margin-left: 14%;
+	
+	height: 80px;
+	width: 80px;
+	
+	background-image: url(../images/logo_mpu.png);
+	background-size: cover;
+}
+#afterheader {
+	height: 100px;
+	margin: 0 auto;
+	width: 80%;
+	background-image: url(../images/slide_food_cafe_snack_coca.jpg);
+	background-size: cover;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+#afterheader #result_search_form {
+	width: 100%;
+	height: 40px;
+	margin: 0 auto;
+	padding-top: 32px;
+}
+#result_search_form #search_bar input {
+	width: 200px;
+	height: 32px;
+	padding-left: 15px;
+	padding-right: 10px;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	font-size: 1.6rem;
+	line-height: 1.2rem;
+	background-color: rgba(255,255,255,0.00);
+}
+#result_search_form #date_from input {
+	width: 90px;
+	height: 32px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 50px;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	background-color: rgba(255,255,255,0.00);
+	background-image: url(../images/date111.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#result_search_form #date_to input {
+	width: 90px;
+	height: 32px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 20px;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	background-color: rgba(255,255,255,0.00);
+	background-image: url(../images/date222.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#result_search_form #price_bar input {
+	width: 90px;
+	height: 32px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 25px;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: rgba(255,255,255,0.00);
+	background-image: url(../images/euro.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#result_search_form #search_button input {
+	width: 100px;
+	height: 36px;
+	margin-left: calc(100% - 748px);
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: hidden;
+	border-radius: 2px;
+	cursor: pointer;
+	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: rgba(255,126,46,1.00);
+	color: #FFFFFF;
+	font-size: 1.4rem;
+}
+#result_wrapper #result_title {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
+#result_wrapper #result_title p {
+	font-size: 1.2rem;
+	color: #8D8D8D;
+	float: left;
+	line-height: 2.2rem;
+}
+#result_wrapper #result_title h1 {
+	font-size: 2.8rem;
+	float: left;
+}
+/*.select { 
+}     
+#sleHid { 
+	display:block; 
+	width:auto;
+	height: auto; 
+	overflow:hidden; 
+}     
+#sleBG { 
+	width:78px; 
+	height:24px; 
+	border:#61AC36 1px solid; 
+	border-right:none; 
+	background:url("../images/common/selArr.jpg") #fff no-repeat 62px 1px; display:block;
+}*/
+#result_title div #list_result_order {
+	width: 120px;
+	height: 30px;
+	margin-left: calc( 100% - 770px );
+	border-radius: 2px;
+	border: 1px solid #DDDDDD;
+	outline: none;
+	/*
+	line-height: 25px;
+	
+	display: inline-block;
+	
+	background-size: 5px 5px,5px 5px,25px 25px,1px 25px;
+	
+	background-color: #fff;
+	
+	background-image: repeating-linear-gradient(225deg,rgb(105,123,149) 0%,rgb(105,123,149) 50%,transparent 50%,transparent 100%), 
+	
+	repeating-linear-gradient(135deg,rgb(105,123,149) 0%,rgb(105,123,149) 50%,transparent 50%,transparent 100%), 
+	
+	linear-gradient( #FFFFFF 0%,#F8F9Fd, #EFFAFA 100%), 
+	
+	repeating-linear-gradient( rgb(191, 204, 220) 0%,rgb(191, 204, 220) 100%);
+	
+	background-repeat: no-repeat;
+	
+	background-position: 101px 10px,106px 10px,right top,92px top;
+	*/
+	-webkit-appearance: none;
+}
+#result_wrapper #result_list {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	float: none;
+}
+#result_wrapper #result_list #list_border {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+#result_wrapper #result_list .result_event {
+	width: 300px;
+	height: 420px;
+	background-color: rgba(223,223,223,0.28);
+	margin-left: calc(17% - 150px);
+	margin-right: calc(16% - 150px);
+	margin-bottom: 30px;
+	float: left;
+}
+#result_list .result_event .result_event_pic {
+	width: 300px;
+	height: 300px;
+}
+#result_list .result_event .result_event_info {
+	width: 300px;
+	height: 120px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	float: left;
+}
+
+.result_event .result_event_info .event_name {
+	width: 200px;
+	height: 40px;
+	float: left;
+	font-size: 2.4rem;
+	font-weight: 600;
+}
+.result_event_info .event_price label {
+	font-size: 3.6rem;
+	font-weight: 900;
+	color: rgba(255,126,46,1.00);
+}
+.result_event .result_event_info .event_price {
+	width: 90px;
+	height: 50px;
+	float: left;
+}
+.result_event .result_event_info .event_host {
+	margin-top: -20px;
+	width: 200px;
+	height: 20px;
+	float: left;
+}
+.result_event .result_event_info .event_date_style {
+	width: 160px;
+	height: 30px;
+	float: left;
+}
+.result_event_info .event_host p {
+	line-height: 1.2rem;
+}
+.result_event_info .event_date_style p {
+	line-height: 1.2rem;
+}
+
+.result_event .result_event_info .event_button {
+	width: 120px;
+	height: 40px;
+	margin-left: 10px;
+	float: left;
+}
+.result_event_info .event_button input {
+	width: 100%;
+	height: 100%;
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #DDDDDD;
+	border-radius: 2px;
+	cursor: pointer;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #FFFFFF;
+	color: rgba(255,126,46,1.00);
+	font-size: 1.4rem;
+}
+
+body footer {
+	color: #8D8D8D;
+	/*border-top: 1px solid #8D8D8D;*/
+}
+body footer a {
+	color: #8D8D8D;
+}
