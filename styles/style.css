@@ -1,0 +1,92 @@
+/* CSS Document */
+@charset "utf-8";
+@import url("../fonts/HelveticaNeueDeskUI/stylesheet.css");
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	min-width: 1200px;
+	max-width: 1600px;
+	min-height: 600px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+html{
+    font-size:62.5%; 
+}
+/*header style*/
+header {
+	height: 120px;
+	margin: 0 auto;
+	width: 100%;
+}
+#headerLinks {
+	height: 100%;
+	width: 100%;
+}
+#headerLinks ul {
+	width: auto;
+	height: 90px;
+	padding-left: calc( 90% - 310px );
+	margin: 0 auto;
+	padding-top: 30px;
+}
+#headerLinks ul a img {
+	height: 36px;
+	display: block;
+	width: 36px;
+	margin-right: 10px;
+	float: left;
+	outline: none;
+}
+#headerLinks li {
+	height: 40px;
+	display: block;
+	width: 120px;
+	float: left;
+	margin-right: 10px;
+	line-height: 2.8rem;
+}
+#headerLinks a {
+	display: block;
+	text-align: center;
+	width: auto;
+	font-size: 1.2rem;
+	color: #FFFFFF;
+	border: 1px solid rgba(255,255,255,0.00);
+	border-radius: 6px;
+	list-style-type: none;
+	text-decoration: none;
+	outline: none;
+}
+#headerLinks li a:hover,
+#headerLinks li a:active,
+#headerLinks li a:focus {
+	border: 1px solid rgba(255,255,255,1.00);
+	border-radius: 4px;
+	list-style-type: none;
+	text-decoration:none;
+}
+.wrapper {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+/*footer style*/
+body footer {
+	height: 54px;
+	text-align: center;
+	width: 100%;
+	color: #FFFFFF;
+	font-size: 1.0rem;
+	float: left;
+	padding-top: 6px;
+}
+body footer a {
+	color: #FFFFFF;
+	font-size: 1.2rem;
+	text-decoration: none;
+	padding-left: 20px;
+}
+
