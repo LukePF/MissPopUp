@@ -1,0 +1,136 @@
+
+/* for login page*/
+
+#loginForm span{
+	color: #adadad;
+
+}
+
+.login-dialog{
+	background: #f0f0f0;
+	margin: 0 auto;
+
+	height: 450px;
+	width: 400px;
+}
+
+.login-title{
+	height:100px;
+	color: white;
+	text-align: left;
+	background-color:red;
+
+}
+.login-title-heading{
+	font-weight: 800;
+	text-align: center;
+	margin: 0 auto;
+}
+.login-title-tip{
+	cursor: pointer;
+	width: 125px;
+	margin-left: 260px;
+}
+
+
+
+/*for register page*/
+.register-title{
+	height:60px;
+	color: white;
+	font-size: 20px;
+	padding-left: 30px;
+	padding-top: 20px;
+	font-weight: 600;
+	background-color:red;
+}
+
+.register-dialog{
+	border-radius: 10px;
+	background: #f0f0f0;
+	margin: 0 auto;
+	height: 450px;
+	width: 500px;
+}
+
+.register-href{
+	text-decoration-line: none;
+	font-size: 12px;
+	color: #adadad;
+	cursor: pointer;
+
+}
+
+#registerForm span{
+	color: #adadad;
+}
+
+
+
+/*for newpopup gage*/
+#newpopupForm span{
+	color: #adadad;
+}
+#newpopupForm textarea{
+	resize:none;
+}
+
+.newpopup-dialog{
+	border-radius: 10px;
+	background: #f0f0f0;
+	margin: 0 auto;
+	height: 450px;
+	width: 720px;
+}
+
+.newpopup-file{
+	position: relative;
+	/*width: 50%;*/
+	/*height: 15%;*/
+	/*border-radius: 10px;*/
+	/*padding-bottom: 2%;*/
+	/*left: 25%;*/
+	/*overflow: hidden;*/
+	/*border: 2px solid #EBEBEB;*/
+	/*background: none repeat scroll 0 0 #FF7E2E;*/
+	/*color: white;*/
+	cursor: pointer;
+	text-align: center;
+	/*    padding-bottom: 5px;*/
+	/*padding-top: 5px;*/
+}
+
+.newpopup-file-path{
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*border-radius: 10px;*/
+
+	/*    display: block; */
+	cursor:pointer;
+	/*width: 100%;*/
+	height: 30px;
+	color: yellow;
+
+	background-color: yellow;
+	/*    增大不同浏览器的可点击区域*/
+	font-size: 99999px;
+	/*    实现的关键点    */
+	opacity: 0;
+	/*     兼容IE     */
+	filter:alpha(opacity=0.5);
+	/*    background-color: #FF7E2E; */
+}
+
+.newpopup-title{
+	height:60px;
+	color: white;
+	font-size: 20px;
+	padding-left: 30px;
+	padding-top: 20px;
+	font-weight: 600;
+	background-color:red;
+}
+
+
+
