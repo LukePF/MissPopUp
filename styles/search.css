@@ -23,6 +23,11 @@ body {
 	border-bottom-left-radius: 2px;
 	border-bottom-right-radius: 2px;
 }
+
+#headerLinks a{
+	cursor: pointer;
+}
+
 #index_wrapper {
 	height: calc(100% - 180px);
 }
