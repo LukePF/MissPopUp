@@ -1,21 +1,36 @@
-
+@import url("../fonts/glyphicons-halflings-regular.ttf");
 /* for login page*/
+#loginForm{
+	padding: 20px;
+}
 
 #loginForm span{
 	color: #adadad;
+	font-size: 15px;
 
+}
+
+#loginFormButton{
+	background-color:red;
+	margin-bottom: 20px;
+}
+
+#loginWithFacebook{
+	margin-left:90px;
+	width:200px;
+	margin-top: 20px;
 }
 
 .login-dialog{
 	background: #f0f0f0;
 	margin: 0 auto;
-
 	height: 450px;
 	width: 400px;
 }
 
 .login-title{
 	height:100px;
+	padding-top: 5px;
 	color: white;
 	text-align: left;
 	background-color:red;
@@ -27,6 +42,7 @@
 	margin: 0 auto;
 }
 .login-title-tip{
+	font-size: 15px;
 	cursor: pointer;
 	width: 125px;
 	margin-left: 260px;
@@ -35,6 +51,41 @@
 
 
 /*for register page*/
+.register-dialog{
+	border-radius: 10px;
+	background: #f0f0f0;
+	margin: 0 auto;
+	height: 450px;
+	width: 500px;
+}
+#registerForm{
+	padding: 10px;
+
+}
+
+#registerFormLeft{
+	float:left; 
+	width:46%;
+	box-sizing: border-box; 
+	margin-left: 2%;
+	margin-right: 2%;
+
+}
+
+#registerFormRight{
+	float:left; 
+	width:46%;
+	box-sizing: border-box; 
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#registerFormRight .registerButton{
+	background-color:red; 
+	width: 60%;
+	margin-left:40%; 
+	margin-top:10px;
+}
 .register-title{
 	height:60px;
 	color: white;
@@ -45,81 +96,39 @@
 	background-color:red;
 }
 
-.register-dialog{
-	border-radius: 10px;
-	background: #f0f0f0;
-	margin: 0 auto;
-	height: 450px;
-	width: 500px;
-}
+
 
 .register-href{
-	text-decoration-line: none;
+	text-decoration: none;
 	font-size: 12px;
 	color: #adadad;
+	width: 250px;
 	cursor: pointer;
 
 }
 
 #registerForm span{
 	color: #adadad;
+	font-size: 15px;
+
 }
 
 
 
 /*for newpopup gage*/
-#newpopupForm span{
-	color: #adadad;
-}
-#newpopupForm textarea{
-	resize:none;
-}
 
 .newpopup-dialog{
 	border-radius: 10px;
 	background: #f0f0f0;
 	margin: 0 auto;
-	height: 450px;
+	height: 400px;
 	width: 720px;
-}
 
-.newpopup-file{
-	position: relative;
-	/*width: 50%;*/
-	/*height: 15%;*/
-	/*border-radius: 10px;*/
-	/*padding-bottom: 2%;*/
-	/*left: 25%;*/
-	/*overflow: hidden;*/
-	/*border: 2px solid #EBEBEB;*/
-	/*background: none repeat scroll 0 0 #FF7E2E;*/
-	/*color: white;*/
-	cursor: pointer;
-	text-align: center;
-	/*    padding-bottom: 5px;*/
-	/*padding-top: 5px;*/
-}
 
-.newpopup-file-path{
-	position: absolute;
-	top: 0;
-	left: 0;
-	/*border-radius: 10px;*/
-
-	/*    display: block; */
-	cursor:pointer;
-	/*width: 100%;*/
-	height: 30px;
-	color: yellow;
-
-	background-color: yellow;
-	/*    增大不同浏览器的可点击区域*/
-	font-size: 99999px;
-	/*    实现的关键点    */
-	opacity: 0;
-	/*     兼容IE     */
-	filter:alpha(opacity=0.5);
-	/*    background-color: #FF7E2E; */
+	/*background: #f0f0f0;
+	margin: 0 auto;
+	height: 450px;
+	width: 400px;*/
 }
 
 .newpopup-title{
@@ -131,6 +140,172 @@
 	font-weight: 600;
 	background-color:red;
 }
+
+#newpopupForm{
+	padding: 20px;
+}
+
+#newpopupFormDiv{
+	width: 60%;
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDivName{
+	width: 48%; 
+	margin-right: 2%; 
+	float: left;
+	box-sizing: border-box;
+}
+
+#newpopupFormDivAddress{
+	width: 48%; 
+	margin-left: 2%; 
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDivPrice{
+	width: 20%;
+	margin-right: 4%;
+	float: left;
+	box-sizing: border-box;
+}
+
+#newpopupFormDivCity{
+	width: 24%; 
+	margin-right: 0%; 
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDivSeatMin{
+	 width: 16%;
+	 margin-left: 4%; 
+	 float: left; 
+	 box-sizing: border-box;
+}
+
+#newpopupFormDivSeatMax{
+	width: 16%; 
+	margin-left: 8%; 
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDivDate{
+	width: 32%; 
+	margin-right: 6%;
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDivDateIcon{
+	width: 10%; 
+	margin-right: 2%; 
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDivTime{
+	 width: 32%; 
+	 margin-left: 2%; 
+	 float: left; 
+	 box-sizing: border-box;
+}
+
+#newpopupFormDivTimeIcon{
+	swidth: 10%; 
+	margin-left: 6%; 
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDivType{
+	padding-top: 20px; 
+	width: 30%; 
+	margin-right: 3%; 
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDiv select{
+	background-color: red;
+	color: white;
+}
+
+#newpopupFormDivStyle{
+	padding-top: 20px; 
+	width: 30%; 
+	margin-right: 4%; 
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDivImage{
+	padding-top:8px; 
+	padding-bottom: 4px; 
+	border-radius: 5px; 
+	margin-top: 20px; 
+	position: relative; 
+	background-color:red; 
+	width: 33%; 
+	height: 35px;
+	float: left; 
+	/*color: white;*/
+
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+#newpopupFormDivImage .selectPicture{
+	padding-left: 8px; 
+	color: white;
+	font-size:14px;
+}
+#newpopupFormDivImageInput{
+	top: 0;                 
+    left: 0;
+    cursor:pointer;
+    position: absolute;
+    filter:alpha(opacity=0);
+    background-color: red;
+    color: white;
+    opacity: 0;
+    font-size: 0px;
+    height: 40px;"
+}
+
+#newpopupFormDivDescription{
+	width: 36%; 
+	margin-left: 4%; 
+	float: left; 
+	box-sizing: border-box;
+}
+
+#newpopupFormDivButtonDiv{
+	margin:0 auto; 
+	margin-top: 20px;	
+}
+
+#newpopupFormDivButton{
+	color:white; 
+	height: 40px;
+	margin-left: calc(100% - 150px); 
+	width:150px;
+	background-color: red;
+}
+#newpopupForm span{
+	color: #adadad;
+	font-size: 15px;
+}
+#newpopupForm textarea{
+	resize:none;
+}
+
+
+
+
 
 
 
