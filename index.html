@@ -68,12 +68,13 @@
                 </div>
             </div>
             <br>
-            <form id="loginForm">
+            <form id="loginForm" action="processing.php" method="post">
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Username">
+                    <input class="form-control" type="text" placeholder="Username" name="username">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="password" placeholder="Password">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                    <input type="hidden" name="choose" value="L">
                 </div>
                 <div class="form-group">
                       <div class="checkbox">
@@ -83,7 +84,7 @@
                        </div>
                 </div>
                 <div class="form-group">
-                    <button id="loginFormButton" class="btn btn-primary btn-lg btn-block"> 
+                    <button id="loginFormButton" class="btn btn-primary btn-lg btn-block" type="submit" name="submit" value="Login"> 
                     Login </button>
                 </div>
                     &nbsp;&nbsp; 
@@ -102,24 +103,25 @@
                 <span>JION MISSPOPUP</span>
             </div>
 
-            <form id="registerForm">
+            <form id="registerForm" action="processing.php" method="post">
                 <br>
                 <div id="registerFormLeft">
                     <div class="form-group">
                         <span>Username</span>
-                        <input class="form-control" type="text" placeholder="Username">
+                        <input class="form-control" type="text" name="username" placeholder="Username">
                     </div>
                     <br>
 
                     <div class="form-group">
                         <span>Password</span>
-                        <input class="form-control" type="password" placeholder="Password">
+                        <input class="form-control" type="password" name="password" placeholder="Password">
                     </div>
                     <br>
 
                     <div class="form-group" >
                         <span>Password Confirm</span>
-                        <input class="form-control" type="password" placeholder="Password again">
+                        <input class="form-control" type="password" name="pswcfm" placeholder="Password again">
+                        <input type="hidden" name="choose" value="R">
                     </div>
                     <br>
 
@@ -139,12 +141,12 @@
 
                     <div class="form-group" >
                         <span>Fullname</span>
-                        <input set-focus class="form-control" type="text" placeholder="Fullname">
+                        <input set-focus class="form-control" type="text" name="fullname" placeholder="Fullname">
                     </div>
                     <br>
                     <div class="form-group" >
                         <span>Email</span>
-                        <input class="form-control" type="email" placeholder="Email">
+                        <input class="form-control" type="email" name="email" placeholder="Email">
                     </div>
                     <br>
                     <div class="form-group">
@@ -172,48 +174,49 @@
             </div>
 
             <br>
-            <form id="newpopupForm" >
+            <form id="newpopupForm"  action="processing.php" method="post" enctype="multipart/form-data">
                 <div id="newpopupFormDiv">
                     <div>
-                        <div id="newpopupFormDivName" class="form-group">
+                        <div id="newpopupFormDivName" class="form-group" >
                             <span>Event name </span>
-                            <input class="form-control" type="text" placeholder="Hotpot">
+                            <input class="form-control" type="text" name="pop_name" placeholder="Hotpot">
                         </div>
 
                         <div id="newpopupFormDivAddress" class="form-group">
                             <span>Address </span>
-                            <input class="form-control" type="text" placeholder="Finnimaenkatu">
+                            <input class="form-control" type="text" name="location" placeholder="Finninmaenkatu">
                         </div>
                     </div>
 
                     <div>
                         <div id="newpopupFormDivPrice" class="form-group" >
                             <span>Price </span>
-                            <input class="form-control" type="text" placeholder="30€">
+                            <input class="form-control" type="text" name="price" placeholder="30€">
                         </div>
 
                         <div id="newpopupFormDivCity" class="form-group" >
                             <span>City </span>
-                            <input class="form-control" type="text" placeholder="Tampere">
+                            <input class="form-control" type="text" name="city" placeholder="Tampere">
                         </div>
 
                         <div id="newpopupFormDivSeatMin" class="form-group">
                             <span>seats </span>
-                            <input class="form-control" type="text" placeholder="Min">
+                            <input class="form-control" type="text" name="size_min" placeholder="Min">
                         </div>
 
                         <div id="newpopupFormDivSeatMax" class="form-group">
                             <br>
-                            <input class="form-control" type="text" placeholder="Max">
+                            <input class="form-control" type="text" name="size_max" placeholder="Max">
+                            <input  name="owner" type="hidden" value=".$usercheck." />
                         </div>
                     </div>
 
                     <div ng-controller="DatepickerDemoCtrl">
                         <div id="newpopupFormDivDate" class="form-group">
                             <span>Date </span>
-                            <input class="form-control" type="text" placeholder="DD/MM/YYYY"
+                            <input class="form-control" type="text" placeholder="MM/DD/YYYY"
                                    is-open="opened"
-                                   datepicker-popup="dd/MM/yyyy"
+                                   datepicker-popup="MM/dd/yyyy"
                                    ng-model="dt"
                                    datepicker-options="dateOptions"
                                    min-date="minDate"
@@ -221,6 +224,7 @@
                                    ng-required="true"
                                    show-weeks="true"
                                    close-text="Close"
+                                   name="date"
                                     >
                         </div>
 
@@ -233,7 +237,8 @@
 
                         <div id="newpopupFormDivTime" class="form-group">
                             <span>Time </span>
-                            <input class="form-control" type="text" placeholder="00:00">
+                            <input class="form-control" type="text" name="time" placeholder="12:00">
+                            <input type="hidden" name="choose" value="P">
                         </div>
 
                         <div id="newpopupFormDivTimeIcon" class="form-group">
@@ -247,7 +252,7 @@
 
                     <div >
                         <div id="newpopupFormDivType" class="form-group">
-                            <select  class="form-control">
+                            <select  class="form-control" name="typee">
                                 <option>Type</option>
                                 <option>Breakfast</option>
                                 <option>Lunch</option>
@@ -256,7 +261,7 @@
                             </select>
                         </div>
 
-                        <div id="newpopupFormDivStyle" class="form-group" >
+                        <div id="newpopupFormDivStyle" class="form-group" name="style" >
                             <select class="form-control">
                                 <option>Style</option>
                                 <option>Chinese</option>
@@ -272,7 +277,7 @@
                             Select Picture &nbsp;&nbsp;&nbsp;
                                 <i class="glyphicon glyphicon-camera"></i>
                             </span>
-                            <input id="newpopupFormDivImageInput" class="form-control" type="file">
+                            <input id="newpopupFormDivImageInput" class="form-control" name="upfile" type="file">
                         </div>
                     </div>
 
@@ -283,7 +288,7 @@
                     <textarea class="form-control" rows="9"></textarea>
 
                     <div id="newpopupFormDivButtonDiv" class="form-group">
-                        <button id="newpopupFormDivButton" class="btn btn-default"> Launch Popup</button>
+                        <button id="newpopupFormDivButton" class="btn btn-default" type="submit" name="submit" value="popup"> Launch Popup</button>
                     </div>
                 </div>
 
