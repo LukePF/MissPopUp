@@ -1,11 +1,25 @@
 <!doctype html>
-<html>
+<html ng-app="missPopup">
 <head>
 <meta charset="utf-8">
 <title>Search_Result</title>
 <link href="styles/style.css" rel="stylesheet" type="text/css">
 <link href="styles/result.css" rel="stylesheet" type="text/css">
 <link href="styles/datetable.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+
+  <script type="text/javascript" src="jQueryAssets/angular.min.js"></script>
+
+  <script type="text/javascript" src="jQueryAssets/angular.min.js"></script>
+  <script type="text/javascript" src="jQueryAssets/ui-bootstrap-tpls-0.13.0.min.js"></script>
+  <script type="text/javascript" src="jQueryAssets/ngDialog.js"></script>
+  <script type="text/javascript" src="javascript/homePage.js"></script>
+
+
+  <script type="text/javascript" src="javascript/homePage.js"></script>
+
+
 <script src="jQueryAssets/jquery.js"></script>
 <script src="jQueryAssets/jquery-ui.js"></script>
 </head>
@@ -68,11 +82,13 @@
       <div style="clear:both"></div>
     </div>
     
-    <div id="result_list">
+    <div id="result_list" ng-controller="PaginationCtrl">
       <div id="list_border">
-        <div class="result_event">
+        
+        <div class="result_event" ng-repeat="item in pagedItems">
           <div class="result_event_pic">
-          <img src="images/foodexample.png" width="300" height="300" alt=""/> </div>
+            <img  ng-src="images/{{item}}" width="300" height="300" alt=""/> 
+          </div>
           <div class="result_event_info">
             <div class="event_name">EVENT NAME</div>
             <div class="event_price"><label>30,-€</label></div>
@@ -81,8 +97,10 @@
             <div class="event_button"><input type="button" value="Join Now"></div>
           </div>
         </div>
+
+        <button class="btn" href="#" ng-hide="nextPageDisabledClass()" ng-click="loadMore()">Load More</button>
         
-        <div class="result_event">
+        <!-- <div class="result_event">
           <div class="result_event_pic">
             
           </div>
@@ -164,7 +182,7 @@
             <div class="event_style"></div>
             <div class="event_button"></div>
           </div>
-        </div>
+        </div> -->
         
         <div style="clear:both"></div>
       
