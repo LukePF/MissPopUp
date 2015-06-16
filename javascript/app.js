@@ -128,14 +128,43 @@ var app = angular.module('missPopup', ['ngDialog','ui.bootstrap']);
 app.factory("Item", function() {
 
   var items = [
-              "item1.jpg",
-              "item2.jpg",
-              "item3.jpg",
-              "item4.jpg",
-              "item5.jpg",
-              "item6.jpg",
-              "item7.jpg"
-              ];
+    {
+      price: 30,
+      time: 1,
+      image:"item1.jpg",
+    },  
+    {
+      price: 40,
+      time: 2,
+      image:"item2.jpg",
+    },  
+    {
+      price: 20,
+      time: 4,
+      image:"item3.jpg",
+    },  
+    {
+      price: 35,
+      time: 3,
+      image:"item4.jpg",
+    },  
+    {
+      price: 25,
+      time: 6,
+      image:"item5.jpg",
+    },  
+    {
+      price: 30,
+      time: 5,
+      image:"item6.jpg",
+    },  
+    {
+      price: 35,
+      time: 7,
+      image:"item7.jpg",
+    }
+  ];
+
   return {
     get: function(offset, limit) {
       return items.slice(offset, offset+limit);
@@ -166,5 +195,9 @@ app.controller("PaginationCtrl", function($scope, Item) {
   $scope.pageCount = function() {
     return Math.ceil($scope.total/$scope.itemsPerPage);
   };
+
+
+
+
 
 });
