@@ -130,38 +130,73 @@ app.factory("Item", function() {
   var items = [
     {
       price: 30,
-      time: 1,
+      time: "2015/5/12",
       image:"item1.jpg",
     },  
     {
       price: 40,
-      time: 2,
+      time: "2015/5/13",
       image:"item2.jpg",
     },  
     {
       price: 20,
-      time: 4,
+      time: "2015/5/16",
       image:"item3.jpg",
     },  
     {
       price: 35,
-      time: 3,
+      time:"2015/6/14",
       image:"item4.jpg",
     },  
     {
       price: 25,
-      time: 6,
+      time: "2015/6/12",
       image:"item5.jpg",
     },  
     {
       price: 30,
-      time: 5,
+      time: "2015/6/5",
       image:"item6.jpg",
     },  
     {
       price: 35,
-      time: 7,
+      time: "2015/5/27",
       image:"item7.jpg",
+    },  
+    {
+      price: 40,
+      time: "2015/5/27",
+      image:"item8.jpg",
+    },  
+    {
+      price: 15,
+      time: "2015/5/27",
+      image:"item9.jpg",
+    },  
+    {
+      price: 45,
+      time: "2015/5/27",
+      image:"item10.jpg",
+    },  
+    {
+      price: 35,
+      time: "2015/5/27",
+      image:"item11.jpg",
+    },  
+    {
+      price: 25,
+      time: "2015/5/27",
+      image:"item12.jpg",
+    },  
+    {
+      price: 50,
+      time: "2015/5/27",
+      image:"item13.jpg",
+    },  
+    {
+      price: 30,
+      time: "2015/5/27",
+      image:"item14.jpg",
     }
   ];
 
