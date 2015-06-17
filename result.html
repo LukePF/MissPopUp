@@ -66,14 +66,14 @@
       <p style="width:100%">Search results for</p>
       <h1 style="width:160px; line-height: 0pt">TAMPERE</h1>
       <p style="width:480px">FILTERS APPLIED:   PRICE: 30€ - 50€   DATE: 20/05/2015 - 30/05/2015</p>
-      <div ng-init="reverse = false">
+      <div ng-init="reverse = true">
         <span id="sleBG">
           <span id="sleHid">
           <select id="list_result_order" ng-model="order" class="select">
             <option selected="selected">ORDER BY</option>
-            <option value="price" ng-click="reverse != reverse">PRICE</option>
+            <option value="price" ng-click="reverse = !reverse">PRICE</option>
             <option value="by_distance">DISTANCE</option>
-            <option value="time" ng-click="reverse != reverse">TIME</option>
+            <option value="time" ng-click="reverse = !reverse">TIME</option>
           </select>
           </span>
         </span>
@@ -91,6 +91,8 @@
           </div>
           <div class="result_event_info">
             <div class="event_name">EVENT NAME</div>
+{{item.time}}
+
             <div class="event_price"><label>{{item.price}},€</label></div>
             <div class="event_host"><p>hosted by - <label style="font-weight:600">HOST NAME</label></p></div>
             <div class="event_date_style"><p><label style="font-weight:600">Date:</label>20/05/2015<br><label style="font-weight:600">Style:</label>Itlian</p></div>
