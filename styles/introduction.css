@@ -1,0 +1,298 @@
+@charset "utf-8";
+header {
+	height: 90px;
+	margin: 0 auto;
+	width: 100%;
+
+	background-color: rgba(255,126,46,1.00);
+}
+#logo {
+	position: absolute;
+	margin-left: 14%;
+	
+	height: 80px;
+	width: 80px;
+	
+	background-image: url(../images/logo_mpu.png);
+	background-size: cover;
+}
+#afterheader {
+	height: 100px;
+	margin: 0 auto;
+	width: 80%;
+	background-image: url(../images/slide_food_cafe_snack_coca.jpg);
+	background-size: cover;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+#afterheader #result_search_form {
+	width: 100%;
+	height: 40px;
+	margin: 0 auto;
+	padding-top: 32px;
+}
+#result_search_form #search_bar input {
+	width: 200px;
+	height: 32px;
+	padding-left: 15px;
+	padding-right: 10px;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	font-size: 1.6rem;
+	line-height: 1.2rem;
+	background-color: rgba(255,255,255,0.00);
+}
+#result_search_form #date_from input {
+	width: 90px;
+	height: 32px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 50px;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	background-color: rgba(255,255,255,0.00);
+	background-image: url(../images/date111.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#result_search_form #date_to input {
+	width: 90px;
+	height: 32px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 20px;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	background-color: rgba(255,255,255,0.00);
+	background-image: url(../images/date222.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#result_search_form #price_bar input {
+	width: 90px;
+	height: 32px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 25px;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	background-color: rgba(255,255,255,0.00);
+	background-image: url(../images/euro.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#result_search_form #search_button input {
+	width: 100px;
+	height: 36px;
+	margin-left: calc(100% - 748px);
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: hidden;
+	border-radius: 2px;
+	cursor: pointer;
+	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: rgba(255,126,46,1.00);
+	color: #FFFFFF;
+	font-size: 1.4rem;
+}
+
+/****************************************************/
+#intro_wrapper {
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+#intro_wrapper #intro_title {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+#intro_wrapper #intro_title p {
+	font-size: 1.2rem;
+	color: #8D8D8D;
+	float: left;
+	margin-top: -20px;
+}
+#intro_wrapper #intro_title h1 {
+	font-size: 2.8rem;
+	float: left;
+	line-height: 3.4rem;
+}
+#intro_wrapper #intro_title #event_pricetag {
+	float: left;
+	font-size: 2.8rem;
+	font-weight: 900;
+	color: rgba(255,126,46,1.00);
+	padding-top: 19px;
+	padding-left: 40px;
+	padding-bottom: 19px;
+}
+#intro_wrapper #intro_left {
+	width: 440px;
+	height: auto;
+	float: left;
+}
+#intro_left #intro_location #intro_loca_map {
+	width: 100%;
+    height: 200px;
+	border-radius: 4px;
+    box-shadow: 3px 2px 2px #aaaaaa;
+}
+/****************************************************/
+body footer {
+	color: #8D8D8D;
+	/*border-top: 1px solid #8D8D8D;*/
+}
+body footer a {
+	color: #8D8D8D;
+}
+#intro_right #intro_desc p {
+	width: 95%;
+	text-align: justify;
+}
+#intro_wrapper #intro_right {
+	width: 480px;
+	height: auto;
+	margin-left: calc( 100% - 920px );
+	float: left;
+}
+#intro_right #intro_info .info_type { 
+	width:120px;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+#intro_right #intro_info p {
+	width: auto;
+	float: left;
+	line-height: 0rem;
+}
+#intro_info div{
+	width: 51%;
+	line-height: 0.6rem;
+}
+#intro_wrapper #intro_right .intro_block {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-bottom: 40px;
+}
+  
+#sleHid { 
+	float: left;
+	/*display:block; 
+	width:auto;
+	height: auto; 
+	overflow:hidden; */
+}
+/*.select { 
+}        
+#sleBG { 
+	width:78px; 
+	height:24px; 
+	border:#61AC36 1px solid; 
+	border-right:none; 
+	background:url("../images/common/selArr.jpg") #fff no-repeat 62px 1px; display:block;
+}*/
+#sleBG #sleHid #guests_number {
+	width: 120px;
+	height: 32px;
+	padding-left: 25px;
+	border-radius: 2px;
+	border: 1px solid #DDDDDD;
+	outline: none;
+	color: #8D8D8D;
+	/*
+	line-height: 25px;
+	
+	display: inline-block;
+	
+	background-size: 5px 5px,5px 5px,25px 25px,1px 25px;
+	
+	background-color: #fff;
+	
+	background-image: repeating-linear-gradient(225deg,rgb(105,123,149) 0%,rgb(105,123,149) 50%,transparent 50%,transparent 100%), 
+	
+	repeating-linear-gradient(135deg,rgb(105,123,149) 0%,rgb(105,123,149) 50%,transparent 50%,transparent 100%), 
+	
+	linear-gradient( #FFFFFF 0%,#F8F9Fd, #EFFAFA 100%), 
+	
+	repeating-linear-gradient( rgb(191, 204, 220) 0%,rgb(191, 204, 220) 100%);
+	
+	background-repeat: no-repeat;
+	
+	background-position: 101px 10px,106px 10px,right top,92px top;
+	*/
+	-webkit-appearance: none;
+}
+#intro_right #intro_gues input{
+	width: 120px;
+	height: 32px;
+	margin-left: 40px;
+	float: left;
+	outline: none;
+	list-style-type: none;
+	border: hidden;
+	border-radius: 1px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: rgba(255,126,46,1.00);
+	color: #FFFFFF;
+	font-size: 1.4rem;
+}
+#intro_wrapper #intro_right #intro_book_button {
+	padding-top: 20px;
+	border-top: 1px solid #DDDDDD;
+}
+#intro_right #intro_summ .summ_type {
+	width:160px;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+#intro_right #intro_summ p {
+	width: auto;
+	float: left;
+	line-height: 0rem;
+}
+#intro_summ div{
+	width: 51%;
+	line-height: 0.6rem;
+}
+#intro_right #intro_book_button input {
+	width: 140px;
+	height: 40px;
+	outline: none;
+	list-style-type: none;
+	border: hidden;
+	border-radius: 4px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: rgba(255,126,46,1.00);
+	color: #FFFFFF;
+	font-size: 1.6rem;
+}

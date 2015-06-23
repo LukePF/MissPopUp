@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Event_Introduction</title>
+
+<link href="styles/style.css" rel="stylesheet" type="text/css">
+<link href="styles/introduction.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false"></script><script type="text/javascript" src="jQueryAssets/intro.js"></script>
+</head>
+
+<body>
+  <header><!-- This is the header content. It contains Logo and links -->
+    <div id="logo"></div>
+  <div id="headerLinks">
+    <ul>
+        <a href="Search.html" title="Search"><img src="images/ic_search.png" width="24" height="24" alt=""/></a>
+        <li ><a href="NewPopup.html" title="POPUP">POPUP</a></li>
+        <li><a href="Login.html" title="LOGIN">LOGIN</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  <div id="afterheader">
+    <form id="result_search_form" method= "GET" class="form" action="Result.php">
+     <div id="search_bar"><input type="search" name="searchbar" placeholder="Tampere"></div>
+     <div id="date_from"><input name="date_from" type="readonly"></div>
+		<script>
+        $( "#dateorder" ).datepicker({
+            inline: true
+        });
+          // Hover states on the static widgets
+        $( "#dialog-link, #icons li" ).hover(
+            function() {
+                $( this ).addClass( "ui-state-hover" );
+            },
+            function() {
+                $( this ).removeClass( "ui-state-hover" );
+            }
+        );
+        </script>
+     <div id="date_to"><input name="date_to"></div>
+     <div id="price_bar"><input name="price_bar"></div>
+     <div id="search_button"><input type="submit" value="NARROW IT"></div>
+    </form>
+  </div>
+
+  <div id="intro_wrapper" class="wrapper">
+    <div id="intro_title">
+      <h1 style="width: auto">EVENT_NAME</h1>
+      <div id="event_pricetag">€30,-</div>
+      <p style="width: 100%;">Hosted by - Event NAME </p>
+      
+      <div style="clear:both"></div>
+    </div>
+    
+    <div id="intro_left">
+      <div id="intro_main_pic"><img src="images/foodexample.png" width="440" height="320" style="box-shadow: 3px 2px 2px #aaaaaa" alt=""/></div>
+      <div id="intro_location">
+        <h2 style="width: auto">Location : </h2>
+        <div id="intro_loca_map"></div>
+      </div>
+    </div>
+    
+    <div id="intro_right">
+      <div id="intro_desc" class="intro_block">
+        <h2 style="width: auto">Popup description : </h2>
+        <p>W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy.</p>
+      </div>
+      <div id="intro_info" class="intro_block">
+        <h2 style="width:auto">Important information : </h2>
+        <div><p class="info_type">Date</p><p>20/10/2015</p></div>
+        <div><p class="info_type">Time</p><p>09:00</p></div>
+        <div><p class="info_type">People</p><p>1-7</p></div>
+        <div><p class="info_type">Style</p><p>Indian</p></div>
+        <div><p class="info_type">Type</p><p>Breakfast</p></div>
+        <div style="clear:both"></div>
+      </div>
+      <div id="intro_gues" class="intro_block">
+        <h2 style="width:auto">Booking :</h2>
+        <div id="guests_select">
+          <span id="sleBG">
+          <span id="sleHid">
+          <select id="guests_number" class="select">
+            <option selected="selected">Guests</option>
+            <option value="no_1">1</option>
+            <option value="no_2">2</option>
+            <option value="no_3">3</option>
+            <option value="no_4">4</option>
+            <option value="no_5">5</option>
+            <option value="no_6">6</option>
+            <option value="no_7">7</option>
+          </select>
+          </span>
+          </span>
+        </div>
+        <input type="button" value="Update">
+        <div style="clear:both"></div>
+      </div>
+      <div id="intro_summ" class="intro_block">
+        <h2 style="width:auto">Popup summary :</h2>
+        <div><p class="summ_type">EVENT_NAME</p><p>€30,-</p></div>
+        <div><p class="summ_type">GUESTS</p><p>3</p></div>
+        <div style="border-top: 1px solid #DDDDDD"><p class="summ_type">TOTAL PRICE</p><p>€90,-</p></div>
+        <div style="clear:both"></div>
+      </div>
+      <div id="pay" class="intro_block">
+        <h2 style="width:auto">Payment options :</h2>
+        <div id="pay_select">
+          <form action="" method="get">
+			<label><input name="Fruit" type="radio" value="" /><img src="images/search.png" width="60" height="25" alt=""/></label>
+			<label><input name="Fruit" type="radio" value="" /><img src="images/search.png" width="60" height="25" alt=""/> </label>
+			<label><input name="Fruit" type="radio" value="" /><img src="images/search.png" width="60" height="25" alt=""/> </label>
+          </form>
+        </div>
+      </div>
+      <div id="intro_book_button" class="intro_block"><input type="button" value="BOOK NOW"></div>
+    </div>
+  </div>
+
+
+  <footer>© MISSPOPUP 2015<a href="Info.html" title="ABOUT MISSPOPUP">ABOUT US</a></footer>
+</body>
+</html>
