@@ -191,12 +191,14 @@ body footer a {
 }
 #intro_right #intro_info p {
 	width: auto;
+	font-size: 1.2rem;
 	float: left;
 	line-height: 0rem;
 }
 #intro_info div{
-	width: 51%;
+	width: 60%;
 	line-height: 0.6rem;
+	display: inline-block;
 }
 #intro_wrapper #intro_right .intro_block {
 	display: block;
@@ -283,6 +285,7 @@ body footer a {
 #intro_summ div{
 	width: 51%;
 	line-height: 0.6rem;
+	display: inline-block;
 }
 #intro_right #intro_book_button input {
 	width: 140px;
