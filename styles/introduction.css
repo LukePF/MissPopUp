@@ -37,17 +37,17 @@ header {
 	padding-left: 15px;
 	padding-right: 10px;
 	float: left;
-	
 	outline: none;
 	list-style-type: none;
 	border: 1px solid #FFFFFF;
 	border-radius: 2px;
-	
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: open-sans;
 	color: #FFFFFF;
 	font-size: 1.6rem;
 	line-height: 1.2rem;
 	background-color: rgba(255,255,255,0.00);
+	font-style: normal;
+	font-weight: 300;
 }
 #result_search_form #date_from input {
 	width: 90px;
@@ -93,35 +93,35 @@ header {
 	padding-right: 5px;
 	margin-left: 25px;
 	float: left;
-	
 	outline: none;
 	list-style-type: none;
 	border: 1px solid #FFFFFF;
 	border-radius: 2px;
-	
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: open-sans;
 	color: #FFFFFF;
 	background-color: rgba(255,255,255,0.00);
 	background-image: url(../images/euro.png);
 	background-size: cover;
 	background-repeat: no-repeat;
+	font-style: normal;
+	font-weight: 300;
 }
 #result_search_form #search_button input {
 	width: 100px;
 	height: 36px;
 	margin-left: calc(100% - 748px);
 	float: left;
-	
 	outline: none;
 	list-style-type: none;
 	border: hidden;
 	border-radius: 2px;
 	cursor: pointer;
-	
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: open-sans;
 	background-color: rgba(255,126,46,1.00);
 	color: #FFFFFF;
 	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 300;
 }
 
 /****************************************************/
@@ -206,7 +206,18 @@ body footer a {
 	height: auto;
 	margin-bottom: 40px;
 }
-  
+
+#intro_gues #bp_form #bp_email {
+	width: 180px;
+	height: 32px;
+	border-radius: 2px;
+	border: 1px solid #DDDDDD;
+	outline: none;
+	margin-bottom: 10px;
+	padding-left: 3px;
+	color: #8D8D8D;
+	-webkit-appearance: none;
+}
 #sleHid { 
 	float: left;
 	/*display:block; 
@@ -226,7 +237,6 @@ body footer a {
 #sleBG #sleHid #guests_number {
 	width: 120px;
 	height: 32px;
-	padding-left: 25px;
 	border-radius: 2px;
 	border: 1px solid #DDDDDD;
 	outline: none;
@@ -254,7 +264,7 @@ body footer a {
 	*/
 	-webkit-appearance: none;
 }
-#intro_right #intro_gues input{
+#intro_right #intro_gues #bp_update_button{
 	width: 120px;
 	height: 32px;
 	margin-left: 40px;
@@ -263,10 +273,12 @@ body footer a {
 	list-style-type: none;
 	border: hidden;
 	border-radius: 1px;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: open-sans;
 	background-color: rgba(255,126,46,1.00);
 	color: #FFFFFF;
 	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 600;
 }
 #intro_wrapper #intro_right #intro_book_button {
 	padding-top: 20px;
@@ -294,8 +306,10 @@ body footer a {
 	list-style-type: none;
 	border: hidden;
 	border-radius: 4px;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: open-sans;
 	background-color: rgba(255,126,46,1.00);
 	color: #FFFFFF;
 	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 300;
 }

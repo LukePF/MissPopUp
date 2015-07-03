@@ -10,7 +10,9 @@ body {
 	min-width: 1200px;
 	max-width: 1600px;
 	min-height: 600px;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: open-sans;
+	font-style: normal;
+	font-weight: 300;
 }
 html{
     font-size:62.5%; 
