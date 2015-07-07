@@ -31,6 +31,13 @@ header {
 	margin: 0 auto;
 	padding-top: 32px;
 }
+#result_search_form #search_bar{
+	width: 30%;
+	height: 40px;
+	box-sizing: border-box;
+	float: left;
+}
+
 #result_search_form #search_bar input {
 	width: 200px;
 	height: 32px;
@@ -49,7 +56,72 @@ header {
 	line-height: 1.2rem;
 	background-color: rgba(255,255,255,0.00);
 }
-#result_search_form #date_from input {
+#result_search_form #date_selection {
+	width: 40%;
+	box-sizing: border-box;
+	float: left;
+	height: 40px;
+}
+
+#result_search_form #date_selection #date_from{
+	width: 130px;
+	/*margin-left: 20px;*/
+	float: left;
+}
+
+#result_search_form #date_selection input{
+	width: 90px;
+	height: 32px;
+	padding-left: 5px;
+	padding-right: 5px;
+	float: left;
+	
+	outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	font-size: 1.6rem;
+	line-height: 1.2rem;
+	background-color: rgba(255,255,255,0.00);
+}
+
+#result_search_form #date_selection .inputBox {
+	box-sizing: border-box;
+	width: 60%;
+	float: left;
+
+}
+
+#result_search_form #date_selection .icon_calendar {
+	box-sizing: border-box;
+	width: 25%;
+	float: left;
+}
+
+
+#result_search_form #date_selection #date_to {
+	width: 130px;
+	margin-left: 20px;
+	box-sizing: border-box;
+	float: left;
+	
+	/*outline: none;
+	list-style-type: none;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	
+	background-color: rgba(255,255,255,0.00);*/
+	/*background-image: url(../images/date222.png);*/
+	/*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
+}
+
+
+
+/*#result_search_form #date_from input {
 	width: 90px;
 	height: 32px;
 	padding-left: 5px;
@@ -80,18 +152,24 @@ header {
 	list-style-type: none;
 	border: 1px solid #FFFFFF;
 	border-radius: 2px;
-	
 	background-color: rgba(255,255,255,0.00);
 	background-image: url(../images/date222.png);
 	background-size: cover;
 	background-repeat: no-repeat;
+}*/
+#result_search_form #price_bar{
+	width: 15%;
+	height: 40px;
+	box-sizing: border-box;
+	float: left;
 }
+
 #result_search_form #price_bar input {
 	width: 90px;
 	height: 32px;
 	padding-left: 5px;
 	padding-right: 5px;
-	margin-left: 25px;
+	/*margin-left: 25px;*/
 	float: left;
 	
 	outline: none;
@@ -99,17 +177,26 @@ header {
 	border: 1px solid #FFFFFF;
 	border-radius: 2px;
 	
+	font-size: 1.6rem;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #FFFFFF;
 	background-color: rgba(255,255,255,0.00);
-	background-image: url(../images/euro.png);
+	/*background-image: url(../images/euro.png);*/
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+#result_search_form #search_button{
+	width: 15%;
+	height: 40px;
+	box-sizing: border-box;
+	padding-left: 10px;
+	float: left;
+}
 #result_search_form #search_button input {
-	width: 100px;
+	/*width: 100px;*/
 	height: 36px;
-	margin-left: calc(100% - 748px);
+	/*margin-left: calc(100% - 700px);*/
 	float: left;
 	
 	outline: none;
