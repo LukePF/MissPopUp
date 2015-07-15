@@ -142,165 +142,7 @@ var app = angular.module('missPopup', ['ngDialog','ui.bootstrap']);
 //  result.html
 
 
-// app.factory("Item", function() {
-
-//   var items = [
-//     {
-//       price: 30,
-//       time: "2015/5/12",
-//       image:"item1.jpg",
-//     },  
-//     {
-//       price: 40,
-//       time: "2015/5/13",
-//       image:"item2.jpg",
-//     },  
-//     {
-//       price: 20,
-//       time: "2015/5/16",
-//       image:"item3.jpg",
-//     },  
-//     {
-//       price: 35,
-//       time:"2015/6/14",
-//       image:"item4.jpg",
-//     },  
-//     {
-//       price: 25,
-//       time: "2015/6/12",
-//       image:"item5.jpg",
-//     },  
-//     {
-//       price: 30,
-//       time: "2015/6/5",
-//       image:"item6.jpg",
-//     },  
-//     {
-//       price: 35,
-//       time: "2015/5/27",
-//       image:"item7.jpg",
-//     },  
-//     {
-//       price: 40,
-//       time: "2015/5/27",
-//       image:"item8.jpg",
-//     },  
-//     {
-//       price: 15,
-//       time: "2015/5/27",
-//       image:"item9.jpg",
-//     },  
-//     {
-//       price: 45,
-//       time: "2015/5/27",
-//       image:"item10.jpg",
-//     },  
-//     {
-//       price: 35,
-//       time: "2015/5/27",
-//       image:"item11.jpg",
-//     },  
-//     {
-//       price: 25,
-//       time: "2015/5/27",
-//       image:"item12.jpg",
-//     },  
-//     {
-//       price: 50,
-//       time: "2015/5/27",
-//       image:"item13.jpg",
-//     },  
-//     {
-//       price: 30,
-//       time: "2015/5/27",
-//       image:"item14.jpg",
-//     }
-//   ];
-
-//   return {
-//     get: function(offset, limit) {
-//       return items.slice(offset, offset+limit);
-//     },
-//     total: function() {
-//       return items.length;
-//     }
-//   };
-// });
-
 app.controller("PaginationCtrl", function($scope) {
-
-// var items1 = [
-//     {
-//       price: 30,
-//       time: "2015/5/12",
-//       image:"item1.jpg",
-//     },  
-//     {
-//       price: 40,
-//       time: "2015/5/13",
-//       image:"item2.jpg",
-//     },  
-//     {
-//       price: 20,
-//       time: "2015/5/16",
-//       image:"item3.jpg",
-//     },  
-//     {
-//       price: 35,
-//       time:"2015/6/14",
-//       image:"item4.jpg",
-//     },  
-//     {
-//       price: 25,
-//       time: "2015/6/12",
-//       image:"item5.jpg",
-//     },  
-//     {
-//       price: 30,
-//       time: "2015/6/5",
-//       image:"item6.jpg",
-//     },  
-//     {
-//       price: 35,
-//       time: "2015/5/27",
-//       image:"item7.jpg",
-//     },  
-//     {
-//       price: 40,
-//       time: "2015/5/27",
-//       image:"item8.jpg",
-//     },  
-//     {
-//       price: 15,
-//       time: "2015/5/27",
-//       image:"item9.jpg",
-//     },  
-//     {
-//       price: 45,
-//       time: "2015/5/27",
-//       image:"item10.jpg",
-//     },  
-//     {
-//       price: 35,
-//       time: "2015/5/27",
-//       image:"item11.jpg",
-//     },  
-//     {
-//       price: 25,
-//       time: "2015/5/27",
-//       image:"item12.jpg",
-//     },  
-//     {
-//       price: 50,
-//       time: "2015/5/27",
-//       image:"item13.jpg",
-//     },  
-//     {
-//       price: 30,
-//       time: "2015/5/27",
-//       image:"item14.jpg",
-//     }
-//   ];
 
   var items = playlist;
 
@@ -333,8 +175,21 @@ app.controller("PaginationCtrl", function($scope) {
     return Math.ceil($scope.total/$scope.itemsPerPage);
   };
 
+});
+
+// #introduction
+
+app.controller("bookingCtrl", function($scope){
 
 
+    // $scope.totalPrice = $scope.guestsNumber * 30;
+    // $scope.guestsNumber = 4;
 
+    // $scope.totalPrice = $scope.guestsNumber * 30;
 
 });
+
+
+
+
+
