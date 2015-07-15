@@ -1,12 +1,33 @@
 <!doctype html>
-<html>
+<html ng-app="missPopup">
 <head>
 <meta charset="utf-8">
 <title>Event_Introduction</title>
 
 <link href="styles/style.css" rel="stylesheet" type="text/css">
 <link href="styles/introduction.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false"></script><script type="text/javascript" src="jQueryAssets/intro.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="styles/ngDialog.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="styles/popDialog.css">
+    <link rel="stylesheet" type="text/css" href="styles/ngDialog-theme-default.css">
+
+<script type="text/javascript" src="jQueryAssets/angular.min.js"></script>
+<script type="text/javascript" src="jQueryAssets/ngDialog.js"></script>
+<script type="text/javascript" src="jQueryAssets/ui-bootstrap-tpls-0.13.0.min.js"></script>
+
+
+<script type="text/javascript" src="javascript/app.js"></script>
+
+
+  <script type="text/javascript" src="jQueryAssets/jquery.js"></script>
+
+
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false"></script>
+
+<script type="text/javascript" src="jQueryAssets/intro.js"></script>
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
 <script>var __adobewebfontsappname__="dreamweaver"</script>
 <script src="http://use.edgefonts.net/open-sans:n3:default.js" type="text/javascript"></script>
@@ -29,27 +50,29 @@
     <form id="result_search_form" method= "GET" class="form" action="Result.php">
      <div id="search_bar"><input type="search" name="searchbar" placeholder="Tampere"></div>
      <div id="date_from"><input name="date_from" type="readonly"></div>
-		<script>
-        $( "#dateorder" ).datepicker({
-            inline: true
-        });
-          // Hover states on the static widgets
-        $( "#dialog-link, #icons li" ).hover(
-            function() {
-                $( this ).addClass( "ui-state-hover" );
-            },
-            function() {
-                $( this ).removeClass( "ui-state-hover" );
-            }
-        );
-        </script>
+		<!-- 
+     <script> 
+         $( "#dateorder" ).datepicker({
+             inline: true
+         });
+           // Hover states on the static widgets
+         $( "#dialog-link, #icons li" ).hover(
+             function() {
+                 $( this ).addClass( "ui-state-hover" );
+             },
+             function() {
+                 $( this ).removeClass( "ui-state-hover" );
+             }
+         );
+         </script>
+  -->
      <div id="date_to"><input name="date_to"></div>
      <div id="price_bar"><input name="price_bar"></div>
      <div id="search_button"><input type="submit" value="NARROW IT"></div>
     </form>
   </div>
 
-  <div id="intro_wrapper" class="wrapper">
+  <div id="intro_wrapper" class="wrapper"  ng-controller="bookingCtrl">
     <div id="intro_title">
       <h1 style="width: auto">EVENT_NAME</h1>
       <div id="event_pricetag">€30,-</div>
@@ -83,17 +106,17 @@
       <div id="intro_gues" class="intro_block">
         <h2 style="width:auto">Booking :</h2>
         <form id="bp_form">
-        <input id="bp_email" type="text" placeholder="E-mail" name="username">
+        <input id="bp_email" type="text" ng-model="guestsEmail" placeholder="E-mail" name="username">
         <div style="clear:both"></div>
-        <div id="guests_select">
-          <span id="sleBG">
+        <div id="guests_select" ng-init="guestsNumber = 1; totalPrice = guestsNumber * 30">
+          <span id="sleBG"> 
           <span id="sleHid">
-          <select id="guests_number" class="select">
+          <select ng-model="guestsNumber" ng-change="totalPrice = guestsNumber * 30" id="guests_number" class="select">
             <option selected="selected">Guests</option>
-            <option value="no_1">1</option>
-            <option value="no_2">2</option>
-            <option value="no_3">3</option>
-            <option value="no_4">4</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
           </select>
           </span>
           </span>
@@ -105,8 +128,10 @@
       <div id="intro_summ" class="intro_block">
         <h2 style="width:auto">Popup summary :</h2>
         <div><p class="summ_type">EVENT_NAME</p><p>€30,-</p></div>
-        <div><p class="summ_type">GUESTS</p><p>3</p></div>
-        <div style="border-top: 1px solid #DDDDDD"><p class="summ_type">TOTAL PRICE</p><p>€90,-</p></div>
+        <div><p class="summ_type">GUESTS</p><p>{{guestsNumber}}</p></div>
+        <div style="border-top: 1px solid #DDDDDD"><p class="summ_type">TOTAL PRICE</p>
+          <p>€{{totalPrice}},-</p>
+        </div>
         <div style="clear:both"></div>
       </div>
       <div id="pay" class="intro_block">
