@@ -16,7 +16,7 @@ if($searchs=="Search with location, like Tampere" || $searchs=="")
 <html ng-app="missPopup">
 <head>
 <meta charset="utf-8">
-<title>Search_Result</title>
+<title>Miss Pup Op, makes everyday a restaurant day!</title>
 <link href="styles/style.css" rel="stylesheet" type="text/css">
 <link href="styles/result.css" rel="stylesheet" type="text/css">
 <link href="styles/datetable.css" rel="stylesheet" type="text/css">
@@ -46,9 +46,20 @@ if($searchs=="Search with location, like Tampere" || $searchs=="")
     <div id="logo"></div>
   <div id="headerLinks" ng-controller="MainCtrl">
     <ul>
-        <a href="Search.html" title="Search"><img src="images/ic_search.png" width="24" height="24" alt=""/></a>
-        <li ><a style="cursor:pointer " ng-click="newpopup()" ng-dialog-controller="NewpopupCtrl" title="POPUP">POPUP</a></li>
-        <li><a style="cursor:pointer " ng-click="login()" ng-dialog-controller="LoginCtrl" title="LOGIN">LOGIN</a></li>
+        <a href="index.php" title="Search"><img src="images/ic_search.png" width="24" height="24" alt=""/></a>
+        <!-- <li><a href="NewPopup.html" title="POPUP">POPUP</a></li> -->
+       <li>
+       <?php if (isset($_SESSION['username']) && !empty($_SESSION['username']))
+       {echo '<a title="POPUP" ng-click="newpopup()" ng-dialog-controller="NewpopupCtrl">
+        POPUP'; }
+        else {echo '<a title="Register" ng-click="register()" ng-dialog-controller="RegisterCtrl">
+        Register';     
+        }?>
+        </a></li>
+        <li>
+        <a title="LOGIN" ng-click="login()" ng-dialog-controller="LoginCtrl">
+        LOGIN
+        </a></li>
       </ul>
     </div>
   </header>
@@ -267,7 +278,7 @@ $eventlist = $eventlist.'
         
         <div class="result_event" ng-repeat="item in pagedItems | orderBy:order:reverse">
           <div class="result_event_pic">
-            <img  ng-src="image/{{item.imgid}}.jpg" width="300" height="300" alt=""/> 
+            <a href="introduction.php?id={{item.imgid}}"><img  ng-src="image/{{item.imgid}}.jpg" width="300" height="300" alt=""/> </a>
           </div>
           <div class="result_event_info">
             <div class="event_name">{{item.eventname}}</div>
@@ -402,8 +413,143 @@ $eventlist = $eventlist.'
         </div>
     </script>
 
-
+<?php if (isset($_SESSION['username']) && !empty($_SESSION['username'])){
+echo '
     <script type="text/ng-template" id="newpopupDialogId">
+
+        <div class="newpopup-dialog">
+
+            <div class="newpopup-title">
+                <span>CREATE NEW POPUP</span>
+            </div>
+
+            <br>
+            <form id="newpopupForm"  action="processing.php" method="post" enctype="multipart/form-data">
+                <div id="newpopupFormDiv">
+                    <div>
+                        <div id="newpopupFormDivName" class="form-group" >
+                            <span>Event name </span>
+                            <input class="form-control" type="text" name="pop_name" placeholder="Hotpot">
+                        </div>
+
+                        <div id="newpopupFormDivAddress" class="form-group">
+                            <span>Address </span>
+                            <input class="form-control" type="text" name="location" placeholder="Finninmaenkatu">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="newpopupFormDivPrice" class="form-group" >
+                            <span>Price </span>
+                            <input class="form-control" type="text" name="price" placeholder="30€">
+                        </div>
+
+                        <div id="newpopupFormDivCity" class="form-group" >
+                            <span>City </span>
+                            <input class="form-control" type="text" name="city" placeholder="Tampere">
+                        </div>
+
+                        <div id="newpopupFormDivSeatMin" class="form-group">
+                            <span>seats </span>
+                            <input class="form-control" type="text" name="size_min" placeholder="Min">
+                        </div>
+
+                        <div id="newpopupFormDivSeatMax" class="form-group">
+                            <br>
+                            <input class="form-control" type="text" name="size_max" placeholder="Max">
+                            <input  name="owner" type="hidden" value=".$usercheck." />
+                        </div>
+                    </div>
+
+                    <div ng-controller="DatepickerDemoCtrl">
+                        <div id="newpopupFormDivDate" class="form-group">
+                            <span>Date </span>
+                            <input class="form-control" type="text" placeholder="MM/DD/YYYY"
+                                   is-open="opened"
+                                   datepicker-popup="MM/dd/yyyy"
+                                   ng-model="dt"
+                                  
+                                   min-date="minDate"
+                                   
+                                   ng-required="true"
+                                   show-weeks="true"
+                                   close-text="Close"
+                                   name="date"
+                                    >
+                        </div>
+
+                        <div id="newpopupFormDivDateIcon" class="form-group">
+                            <br>
+                            <button type="button" class="btn btn-default" ng-click="open($event)">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </button>
+                        </div>
+
+                        <div id="newpopupFormDivTime" class="form-group">
+                            <span>Time </span>
+                            <input class="form-control" type="text" name="time" placeholder="12:00">
+                            <input type="hidden" name="choose" value="P">
+                        </div>
+
+                        <div id="newpopupFormDivTimeIcon" class="form-group">
+                            <br>
+                            <button type="button" class="btn btn-default" ng-click="">
+                                <i class="glyphicon glyphicon-time"></i>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div >
+                        <div id="newpopupFormDivType" class="form-group">
+                            <select  class="form-control" name="typee">
+                                <option>Type</option>
+                                <option>Breakfast</option>
+                                <option>Lunch</option>
+                                <option>Dinner</option>
+                                <option>Snack</option>
+                            </select>
+                        </div>
+
+                        <div id="newpopupFormDivStyle" class="form-group" name="style" >
+                            <select class="form-control">
+                                <option>Style</option>
+                                <option>Chinese</option>
+                                <option>Finnish</option>
+                                <option>Japanese</option>
+                                <option>Italian</option>
+                            </select>
+
+                        </div>
+
+                        <div id="newpopupFormDivImage" class="form-group">
+                            <span class="selectPicture"> 
+                            Select Picture &nbsp;&nbsp;&nbsp;
+                                <i class="glyphicon glyphicon-camera"></i>
+                            </span>
+                            <input id="newpopupFormDivImageInput" class="form-control" name="upfile" type="file">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="newpopupFormDivDescription">
+                    <textarea class="form-control" rows="9"></textarea>
+
+                    <div id="newpopupFormDivButtonDiv" class="form-group">
+                        <button id="newpopupFormDivButton" class="btn btn-default" type="submit" name="submit" value="popup"> Launch Popup</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </script>';}
+?>
+  <!--  <script type="text/ng-template" id="newpopupDialogId">
 
         <div class="newpopup-dialog">
 
@@ -532,7 +678,7 @@ $eventlist = $eventlist.'
         </div>
 
 
-    </script>
+    </script>-->
 
 </body>
 </html>

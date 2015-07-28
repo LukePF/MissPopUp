@@ -47,7 +47,7 @@ $table_l = $row[16];
 <html>
 <head>
 <meta charset="utf-8">
-<title>Event_Introduction</title>
+<title>Miss Pup Op, makes everyday a restaurant day!</title>
 
 <link href="styles/style.css" rel="stylesheet" type="text/css">
 <link href="styles/introduction.css" rel="stylesheet" type="text/css">
@@ -64,9 +64,20 @@ $table_l = $row[16];
     <div id="logo"></div>
   <div id="headerLinks">
     <ul>
-        <a href="Search.html" title="Search"><img src="images/ic_search.png" width="24" height="24" alt=""/></a>
-        <li ><a href="NewPopup.html" title="POPUP">POPUP</a></li>
-        <li><a href="Login.html" title="LOGIN">LOGIN</a></li>
+         <a href="index.php" title="Search"><img src="images/ic_search.png" width="24" height="24" alt=""/></a>
+        <!-- <li><a href="NewPopup.html" title="POPUP">POPUP</a></li> -->
+       <li>
+       <?php if (isset($_SESSION['username']) && !empty($_SESSION['username']))
+       {echo '<a title="POPUP" ng-click="newpopup()" ng-dialog-controller="NewpopupCtrl">
+        POPUP'; }
+        else {echo '<a title="Register" ng-click="register()" ng-dialog-controller="RegisterCtrl">
+        Register';     
+        }?>
+        </a></li>
+        <li>
+        <a title="LOGIN" ng-click="login()" ng-dialog-controller="LoginCtrl">
+        LOGIN
+        </a></li>
       </ul>
     </div>
   </header>
@@ -159,7 +170,7 @@ $table_l = $row[16];
 			$check2=1;
 			else echo '<option selected="selected">Guests</option>';?>
             <?php 
-			for ($az=$row[14]; $az<=$row[5];$az++)
+			for ($az=1; $az<=$row[5];$az++)
 			{echo '<option value='.$az.'>'.$az.'</option>';} 
 			?>
           </select>

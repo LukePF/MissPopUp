@@ -6,7 +6,7 @@ $usercheck = $_SESSION['username'];
 <html ng-app="missPopup">
 <head>
 <meta charset="utf-8">
-<title>Miss Pup Op, makes everyday a restuarant day!</title>
+<title>Miss Pup Op, makes everyday a restaurant day!</title>
 <link href="styles/style.css" rel="stylesheet" type="text/css">
 <link href="styles/search.css" rel="stylesheet" type="text/css">
 
@@ -26,6 +26,9 @@ $usercheck = $_SESSION['username'];
     <script type="text/javascript" src="jQueryAssets/ui-bootstrap-tpls-0.13.0.min.js"></script>
     <script type="text/javascript" src="jQueryAssets/ngDialog.js"></script>
     <script type="text/javascript" src="javascript/homePage.js"></script>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/open-sans:n3:default.js" type="text/javascript"></script>
 
 </head>
 
@@ -34,7 +37,7 @@ $usercheck = $_SESSION['username'];
     <div id="logo"><a href="index.html" title="Miss Pup Op, makes everyday a restuarant day!"></a></div>
   <div id="headerLinks" ng-controller="MainCtrl">
     <ul>
-        <a href="Search.html" title="Search"><img src="images/ic_search.png" width="24" height="24" alt=""/></a>
+        <a href="index.php" title="Search"><img src="images/ic_search.png" width="24" height="24" alt=""/></a>
         <!-- <li><a href="NewPopup.html" title="POPUP">POPUP</a></li> -->
        <li>
        <?php if (isset($_SESSION['username']) && !empty($_SESSION['username']))
@@ -53,12 +56,14 @@ $usercheck = $_SESSION['username'];
   </header>
   
   <div id="index_wrapper" class="wrapper">
+   <div id="title_blank">
+    </div>
     <div id="title_words">
       <h1>Search for the best pop ups near you!</h1>
-      <h2>List your pop up restuarant and organize events anytime you like.</h2>
+      <h2>List your pop up restaurants and organize events anytime you like.</h2>
     </div>
-    <form id="search_form" method= "GET" class="form" action="Result.php">
-     <div id="search_bar"><input type="search" name="searchbar" placeholder="Search for location, e.g. Tampere"></div>
+    <form id="search_form" method= "GET" class="form" action="result.php">
+     <div id="search_bar"><input type="search" name="search" placeholder="Search for location, e.g. Tampere"></div>
      <div id="search_button"><input type="submit" value="Let's eat"></div>
     </form>
   </div>
@@ -101,10 +106,10 @@ $usercheck = $_SESSION['username'];
                     Login </button>
                 </div>
                     &nbsp;&nbsp; 
-                    -------------------------------------------- OR ------------------------------------------- &nbsp;
+                    <!---------------------------------------------- OR ------------------------------------------- &nbsp;-->
                     <br>
                 <div style="margin:0 auto">
-                    <button id="loginWithFacebook" class="btn btn-primary btn-lg btn-block"> Login With Facebook </button>
+                    <!--<button id="loginWithFacebook" class="btn btn-primary btn-lg btn-block"> Login With Facebook </button>-->
                 </div>
             </form>
         </div>
@@ -141,7 +146,7 @@ $usercheck = $_SESSION['username'];
                     <div class="form-group">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox"> Send me updates
+                          <input type="checkbox" name="agree" > I agree with terms and privacy agreement.
                         </label>
                        </div>
                     </div>
@@ -232,9 +237,9 @@ echo '
                                    is-open="opened"
                                    datepicker-popup="MM/dd/yyyy"
                                    ng-model="dt"
-                                   datepicker-options="dateOptions"
+                                  
                                    min-date="minDate"
-                                   date-disabled="disabled(date, mode)"
+                                   
                                    ng-required="true"
                                    show-weeks="true"
                                    close-text="Close"
